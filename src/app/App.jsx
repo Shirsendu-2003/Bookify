@@ -5,6 +5,7 @@ import AppRoutes from "./routes";
 import Loader from "../components/common/Loader";
 
 import ErrorBoundary from "../components/common/ErrorBoundary";
+import SessionTimeout from "../components/common/SessionTimeout";
 
 export default function App() {
   return (
@@ -32,6 +33,7 @@ Loading Application..."
           </div>
         }
       >
+         <SessionTimeout />
         <AppRoutes />
       </Suspense>
     </ErrorBoundary>
