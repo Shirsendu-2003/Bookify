@@ -5,7 +5,7 @@ import AppRoutes from "./routes";
 import Loader from "../components/common/Loader";
 
 import ErrorBoundary from "../components/common/ErrorBoundary";
-import SessionTimeout from "../components/common/SessionTimeout";
+import SessionTimeout from "../services/SessionTimeout";
 
 export default function App() {
   return (
