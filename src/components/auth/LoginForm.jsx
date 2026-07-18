@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaEnvelope, FaLock, FaEye, FaEyeSlash } from "react-icons/fa";
+import { LuLoaderCircle } from "react-icons/lu";
 
 import Input from "../common/Input";
 import Button from "../common/Button";
@@ -155,9 +156,22 @@ text-blue-600
         </Link>
       </div>
 
-      <Button type="submit" loading={loading} className="w-full">
-        Sign In
-      </Button>
+      <Button
+  type="submit"
+  loading={loading}
+  disabled={loading}
+  className="w-full"
+>
+  {loading ? (
+    <>
+      <span className="flex items-center justify-center gap-2">
+        Signing In...
+      </span>
+    </>
+  ) : (
+    "Sign In"
+  )}
+</Button>
 
       
     </form>
